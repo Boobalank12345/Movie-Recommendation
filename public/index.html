@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine - Next Gen Recommendations</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Background removed (handled in CSS body) -->
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Cine Logo" class="logo-img">
+        </div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Your Next <span class="highlight">Masterpiece</span></h1>
+            <p> Movie recommendations tailored just for you.</p>
+        </section>
+
+        <section class="controls">
+            <div class="control-group">
+                <label for="search-input"><i class="fas fa-search"></i> Search</label>
+                <div class="input-wrapper">
+                    <input type="text" id="search-input" placeholder="Search specific movie...">
+                    <button id="search-icon-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label for="genre-select"><i class="fas fa-film"></i> Genre</label>
+                <select id="genre-select">
+                    <option value="All">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Crime">Crime</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Horror">Horror</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="rating-input"><i class="fas fa-star"></i> Min Rating: <span
+                        id="rating-value">0</span></label>
+                <input type="range" id="rating-input" min="0" max="10" step="0.5" value="0">
+            </div>
+
+            <button id="recommend-btn">Find Movies <i class="fas fa-magic"></i></button>
+        </section>
+
+        <section id="results" class="results-grid">
+            <!-- Movie cards will be injected here -->
+            <div class="placeholder-text">Select your preferences and hit "Find Movies" to start.</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CineAI. Powered by Neural Networks.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
